@@ -298,10 +298,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -310,7 +310,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -560,10 +560,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -572,7 +572,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -775,10 +775,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -787,7 +787,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -1037,10 +1037,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -1049,7 +1049,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -1282,10 +1282,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -1294,7 +1294,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -1497,10 +1497,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -1509,7 +1509,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -1759,10 +1759,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -1771,7 +1771,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -1974,10 +1974,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -1986,7 +1986,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -2181,10 +2181,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -2193,7 +2193,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -2409,10 +2409,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -2421,7 +2421,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -2637,10 +2637,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -2649,7 +2649,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -2852,10 +2852,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -2864,7 +2864,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -3110,10 +3110,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -3122,7 +3122,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -3372,10 +3372,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -3384,7 +3384,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -3587,10 +3587,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -3599,7 +3599,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -3845,10 +3845,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -3857,7 +3857,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
@@ -4052,10 +4052,10 @@ class StorageApi
                 $httpBody = new MultipartStream($multipartContents); // for HTTP post (form)
 
             } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
 
             } else {
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams); // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams); // for HTTP post (form)
             }
         }
 
@@ -4064,7 +4064,7 @@ class StorageApi
             $headers['Authorization'] = 'Basic ' . base64_encode($this->config->getUsername() . ":" . $this->config->getPassword());
         }
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         $url = $this->config->getHost() . $resourcePath . ($query ? '?' . $query : '');
 
         $defaultHeaders = [];
